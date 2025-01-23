@@ -28,8 +28,8 @@ pip install dash pandas numpy scikit-learn plotly
 ### Running the App
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/rocket-league-player-cluster-app.git
-   cd rocket-league-player-cluster-app
+   git clone https://github.com/adamclement-exe/rocketreplays.git
+   cd rocketreplays
    ```
 2. Run the app:
    ```bash
