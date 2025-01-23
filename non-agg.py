@@ -22,22 +22,76 @@ app.layout = html.Div([
     html.Div([
         html.P("""
             Welcome to the Rocket League Player Cluster App — an interactive platform for analyzing player performance metrics.
-            Upload JSON replay files, and explore dynamic visualizations, player clustering, and performance insights.
-        """, style={'textAlign': 'center', 'margin': '20px auto', 'maxWidth': '800px', 'fontSize': '18px'}),
-        html.P("""
-            WARNING - UPLOAD CAN TAKE SEVERAL MINUTES WITH MULTIPLE JSON FILES.
-        """, style={'textAlign': 'center', 'margin': '20px auto', 'maxWidth': '800px', 'fontSize': '12px',
-                    'color': '#b30000', 'fontWeight': 'bold', 'backgroundColor': '#ffe6e6',
-                    'padding': '10px', 'borderRadius': '5px'})
+        """, style={
+            'textAlign': 'center',
+            'margin': '20px auto',
+            'maxWidth': '800px',
+            'fontSize': '18px',
+            'lineHeight': '1.6',
+        })
     ]),
+
+    html.Div([
+        html.P("""
+        Upload JSON replay files, and explore dynamic visualizations, player clustering, and performance insights.
+        This tool leverages advanced data analysis techniques like PCA (Principal Component Analysis) and K-Means clustering
+        to help you uncover patterns and trends in your data.
+    """, style={
+            'textAlign': 'center',
+            'margin': '20px auto',
+            'maxWidth': '800px',
+            'fontSize': '18px',
+            'lineHeight': '1.6',
+        })
+    ]),
+
+    html.Div([
+        html.P("""WARNING - UPLOAD CAN TAKE SEVERAL MINUTES WITH MULTIPLE JSON FILES.""", style={
+            'textAlign': 'center',
+            'margin': '20px auto',
+            'maxWidth': '800px',
+            'fontSize': '12px',
+            'lineHeight': '1.6',
+            'color': '#b30000',
+            'fontWeight': 'bold',
+            'backgroundColor': '#ffe6e6',
+            'padding': '10px',
+            'borderRadius': '5px',
+            'boxShadow': '0 2px 5px rgba(0, 0, 0, 0.1)'
+        })
+    ]),
+
+    html.Div([
+        html.P(
+            [
+                "This runs much better locally - source code available at ",
+                html.A("GITHUB", href="https://github.com/adamclement-exe/rocketreplays/")
+            ]
+            , style={
+                'textAlign': 'center',
+                'margin': '20px auto',
+                'maxWidth': '800px',
+                'fontSize': '18px',
+                'lineHeight': '1.6',
+            })
+    ]),
+
     html.Div([
         html.H2("Upload JSON Files"),
         dcc.Upload(
             id='upload-json',
             children=html.Div(['Drag and Drop or ', html.A('Select Files')]),
-            style={'width': '100%', 'height': '60px', 'lineHeight': '60px',
-                   'borderWidth': '1px', 'borderStyle': 'dashed', 'borderRadius': '5px',
-                   'textAlign': 'center', 'margin': '10px', 'backgroundColor': '#f9f9f9'},
+            style={
+                'width': '100%',
+                'height': '60px',
+                'lineHeight': '60px',
+                'borderWidth': '1px',
+                'borderStyle': 'dashed',
+                'borderRadius': '5px',
+                'textAlign': 'center',
+                'margin': '10px',
+                'backgroundColor': '#f9f9f9'
+            },
             multiple=True
         ),
     ]),
