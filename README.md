@@ -38,7 +38,8 @@ pip install dash pandas numpy scikit-learn plotly
 3. Open your web browser and navigate to `http://127.0.0.1:8050/`.
 
 ### Uploading Data
-- JSON files should include structured data for player stats and match outcomes. Example structure:
+- JSON files should be Rocket League `.replay` files converted to JSON using the tool available at [https://rl.nickb.dev/](https://rl.nickb.dev/).
+- Example structure of the JSON files:
   ```json
   {
       "properties": {
@@ -91,4 +92,4 @@ Contributions are welcome! Feel free to submit pull requests or open issues to s
 This project is licensed under the MIT License. See the `LICENSE` file for details.
 
 ## Contact
-For questions or feedback, reach out at [your-email@example.com].
+For questions or feedback, reach out at [adamclement@exe-coll.ac.uk].
